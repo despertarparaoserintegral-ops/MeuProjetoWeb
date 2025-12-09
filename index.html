@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despertar para o Ser Integral - Terapia Holística</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(26, 58, 46, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .nav-logo {
+            color: white;
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #4a8b7a;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(44,95,79,0.9) 0%, rgba(74,139,122,0.9) 100%),
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') center/cover;
+            color: white;
+            padding: 180px 20px 120px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: white;
+            color: #2c5f4f;
+            padding: 18px 45px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c5f4f;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #4a5568;
+            font-style: italic;
+        }
+
+        .vision {
+            background: linear-gradient(135deg, rgba(44,95,79,0.85) 0%, rgba(74,139,122,0.85) 100%),
+                        url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1920&q=80') center/cover;
+            padding: 80px 20px;
+        }
+
+        .vision-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3em;
+            line-height: 1.9;
+            text-align: center;
+            color: white;
+            padding: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-image {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid #2c5f4f;
+        }
+
+        .profile-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-text p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .philosophy {
+            background: linear-gradient(135deg, rgba(247,250,252,0.97) 0%, rgba(237,242,247,0.97) 100%),
+                        url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80') center/cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .philosophy::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Yin_yang.svg') center/contain no-repeat;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .philosophy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .philosophy-content p {
+            margin-bottom: 20px;
+        }
+
+        .philosophy-highlight {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #2c5f4f;
+            margin: 30px 0;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        #servicos {
+            position: relative;
+        }
+
+        #servicos::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Lotusflower_-_3_%285167238579%29.jpg') center/contain no-repeat;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #servicos .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #2c5f4f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(44,95,79,0.05) 0%, rgba(74,139,122,0.05) 100%);
+            z-index: 0;
+        }
+
+        .service-card h3,
+        .service-card p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #2c5f4f;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .approach {
+            background: white;
+            position: relative;
+        }
+
+        .approach::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/52/Ensō.svg') center/contain no-repeat;
+            opacity: 0.025;
+            pointer-events: none;
+        }
+
+        .approach .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .approach-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(44,95,79,0.05) 0%, rgba(74,139,122,0.05) 100%);
+            border-radius: 10px;
+            border-left: 5px solid #2c5f4f;
+        }
+
+        .approach-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c5f4f;
+            margin-right: 25px;
+            min-width: 60px;
+        }
+
+        .approach-text h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .approach-text p {
+            color: #4a5568;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .process {
+            background: linear-gradient(135deg, rgba(247,250,252,0.95) 0%, rgba(237,242,247,0.95) 100%),
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80') center/cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .process::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 550px;
+            height: 550px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Golden_spiral_in_rectangles.svg') center/contain no-repeat;
+            opacity: 0.035;
+            pointer-events: none;
+        }
+
+        .process-list {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .process-item {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .process-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c5f4f;
+            font-size: 2em;
+            line-height: 0.7;
+        }
+
+        .process-item strong {
+            color: #2c5f4f;
+        }
+
+        .process-item p {
+            margin-top: 5px;
+            color: #4a5568;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2c5f4f 0%, #4a8b7a 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            background: white;
+            color: #2c5f4f;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .blog-link {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: 2px solid white;
+        }
+
+        .blog-link:hover {
+            background: white;
+            color: #2c5f4f;
+        }
+
+        footer {
+            background: #1a3a2e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(26, 58, 46, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 15px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .hero {
+                padding: 140px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+
+            .hero p {
+                font-size: 1.05em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-item {
+                flex-direction: column;
+            }
+
+            .approach-number {
+                margin-bottom: 10px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+            }
+
+            .profile-image {
+                flex: 0 0 auto;
+            }
+
+            .profile-image img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Despertar para o Ser Integral</div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
+                <li><a href="#visao" onclick="closeMenu()">Visão</a></li>
+                <li><a href="#filosofia" onclick="closeMenu()">Filosofia</a></li>
+                <li><a href="#quem-sou" onclick="closeMenu()">Quem Sou</a></li>
+                <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
+                <li><a href="#processo" onclick="closeMenu()">Processo</a></li>
+                <li><a href="#como-trabalho" onclick="closeMenu()">Como Trabalho</a></li>
+                <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <h1>Despertar para o Ser Integral</h1>
+        <p class="subtitle">Uma jornada de transformação e reconexão com a sua essência</p>
+        <p>Paro e entro em mim, em busca da essência, essa energia que me habita e também está presente em si e em todo o cosmos. Neste processo, acalento o desejo de a/o auxiliar na descoberta dos seus recursos e facilitar a implementação de estratégias, para que possa encontrar e celebrar o propósito do seu caminho.</p>
+        <a href="#contacto" class="cta-button">Iniciar a Sua Jornada</a>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="visao">
+        <div class="container">
+            <div class="vision-content">
+                "Despertar para o Ser integral que somos e cultivar uma vida com mais equilíbrio, significado e bem-estar."
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="filosofia">
+        <div class="container">
+            <h2 class="section-title">O Meu Olhar Terapêutico</h2>
+            <div class="philosophy-content">
+                <p>Acredito que quem é cuidado deve poder participar de forma ativa no seu processo de cura. Essa participação nasce através do autoconhecimento, da compreensão das causas profundas do desequilíbrio e da abertura à transformação.</p>
+                
+                <div class="philosophy-highlight">
+                    <p>A abordagem que apresento inspira-se na Medicina Tradicional Chinesa, onde a saúde resulta da harmonia entre corpo, mente, espírito e ambiente. O Ser humano é visto como o reflexo do universo, uma parte da imensidão cósmica, influenciado e em relação constante com tudo o que o rodeia — natureza, emoções, ciclos e relações.</p>
+                </div>
+                
+                <p>Quando essa harmonia se perde, o corpo expressa sinais. Compreender esses sinais é o início da transformação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="quem-sou">
+        <div class="container">
+            <h2 class="section-title">Quem Sou</h2>
+            <h3 style="text-align: center; color: #2c5f4f; font-size: 1.8em; margin-bottom: 40px;">Vasco Augusto</h3>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="perfil.jpg" alt="Vasco Augusto - Terapeuta">
+                </div>
+                <div class="profile-text">
+                    <p>Se chegou até aqui, é porque está à procura de algo mais do que uma solução rápida. Procura compreensão, acolhimento e um caminho real para o seu bem-estar.</p>
+                    
+                    <p>Trabalho como terapeuta integrando várias tradições milenares e abordagens contemporâneas: Medicina Tradicional Chinesa, Hipnoterapia, Comunicação Não Violenta, Meditação, Desenvolvimento Pessoal e Espiritual.</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <p>Não ofereço fórmulas mágicas, mas sim um espaço seguro onde a sua história é ouvida sem julgamento, compreendida na sua totalidade e transformada ao seu ritmo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container" id="servicos">
+        <h2 class="section-title">Como Posso Ajudar</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Equilíbrio Físico</h3>
+                <p>Através da Medicina Tradicional Chinesa, trabalhamos o corpo como um sistema integrado, restaurando o fluxo natural de energia e aliviando sintomas físicos na sua raiz.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Transformação Mental</h3>
+                <p>Com a Hipnoterapia, a Medicina Tradicional Chinesa e técnicas de desenvolvimento pessoal, desbloqueamos padrões limitantes e facilitamos a transformação profunda.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Harmonia Emocional</h3>
+                <p>Através da Comunicação Não Violenta e da Meditação, aprendemos a ouvir as suas necessidades mais profundas e a relacionar-se consigo e com as/os outras/os de forma autêntica.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Paz Interior</h3>
+                <p>Com práticas de meditação, cultivamos a presença consciente e a serenidade que já existe dentro de si, mas que foi esquecida no ritmo da vida moderna.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Autoconhecimento</h3>
+                <p>Para quem busca crescimento pessoal e espiritual, ofereço um caminho estruturado de descoberta interior, integrando corpo, mente e espírito num processo transformador.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="processo">
+        <div class="container">
+            <h2 class="section-title">Como Decorre o Processo?</h2>
+            <p class="section-subtitle">Na jornada terapêutica que proponho, utilizo diferentes recursos que se complementam e integram</p>
+            <div class="process-list">
+                <div class="process-item">
+                    <strong>Hipnoterapia</strong>
+                    <p>Acesso aos recursos internos, ressignificação e reconexão com o inconsciente.</p>
+                </div>
+                <div class="process-item">
+                    <strong>Medicina Tradicional Chinesa</strong>
+                    <p>Equilíbrio energético, restauro do fluxo vital e harmonização global.</p>
+                </div>
+                <div class="process-item">
+                    <strong>Meditação</strong>
+                    <p>Presença, foco, calma e enraizamento.</p>
+                </div>
+                <div class="process-item">
+                    <strong>Comunicação Não Violenta (CNV)</strong>
+                    <p>Clareza emocional e desenvolvimento de relações mais conscientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach" id="como-trabalho">
+        <div class="container">
+            <h2 class="section-title">Como Trabalho</h2>
+            <div class="approach-list">
+                <div class="approach-item">
+                    <div class="approach-number">1</div>
+                    <div class="approach-text">
+                        <h3>Acolhimento e Escuta</h3>
+                        <p>Começo sempre criando um espaço seguro e acolhedor. A sua história é ouvida sem julgamento, com empatia genuína e presença total.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-number">2</div>
+                    <div class="approach-text">
+                        <h3>Compreensão Profunda</h3>
+                        <p>Utilizando diferentes abordagens terapêuticas, ajudo-a/o a compreender a origem do que sente - física, emocional ou espiritualmente.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-number">3</div>
+                    <div class="approach-text">
+                        <h3>Ação Consciente</h3>
+                        <p>Juntos, criamos um plano prático e personalizado. Não dou apenas teoria, mas ferramentas concretas que pode aplicar imediatamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contacto">
+        <h2>Pronta/o Para Começar?</h2>
+        <p>O primeiro passo é sempre o mais importante. Vamos conversar sobre como posso ajudá-la/o na sua jornada de transformação.</p>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4em; margin-bottom: 20px; font-weight: 300;">📍 Locais de Atendimento</h3>
+            <p style="font-size: 1.1em; opacity: 0.95;">Online • Coimbra • Condeixa</p>
+        </div>
+        
+        <div class="contact-methods">
+            <a href="https://wa.me/351965519637" class="contact-button">📱 WhatsApp</a>
+            <a href="mailto:despertarparaoserintegral@gmail.com" class="contact-button">📧 Email</a>
+            <a href="https://despertarparaoserintegral.blogspot.com" target="_blank" class="blog-link">📖 Visite o Meu Blog</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Despertar para o Ser Integral. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
