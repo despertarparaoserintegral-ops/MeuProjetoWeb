@@ -338,6 +338,118 @@
             text-align: justify;
         }
 
+        .approach {
+            background: white;
+            position: relative;
+        }
+
+        .approach::before {
+            content: '○';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 550px;
+            opacity: 0.03;
+            pointer-events: none;
+            color: #2c5f4f;
+            font-weight: 100;
+        }
+
+        .approach .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .approach-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(44,95,79,0.05) 0%, rgba(74,139,122,0.05) 100%);
+            border-radius: 10px;
+            border-left: 5px solid #2c5f4f;
+        }
+
+        .approach-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c5f4f;
+            margin-right: 25px;
+            min-width: 60px;
+        }
+
+        .approach-text h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .approach-text p {
+            color: #4a5568;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .process {
+            background: linear-gradient(135deg, rgba(247,250,252,0.95) 0%, rgba(237,242,247,0.95) 100%),
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80') center/cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .process::before {
+            content: '◯';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 500px;
+            opacity: 0.04;
+            pointer-events: none;
+            color: #2c5f4f;
+        }
+
+        .process-list {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .process-item {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .process-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c5f4f;
+            font-size: 2em;
+            line-height: 0.7;
+        }
+
+        .process-item strong {
+            color: #2c5f4f;
+        }
+
+        .process-item p {
+            margin-top: 5px;
+            color: #4a5568;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
         .workshops {
             background: linear-gradient(135deg, rgba(44,95,79,0.03) 0%, rgba(74,139,122,0.03) 100%);
             position: relative;
@@ -543,118 +655,6 @@
             font-style: italic;
         }
 
-        .approach {
-            background: white;
-            position: relative;
-        }
-
-        .approach::before {
-            content: '○';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 550px;
-            opacity: 0.03;
-            pointer-events: none;
-            color: #2c5f4f;
-            font-weight: 100;
-        }
-
-        .approach .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .approach-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .approach-item {
-            display: flex;
-            align-items: start;
-            margin-bottom: 30px;
-            padding: 30px;
-            background: linear-gradient(135deg, rgba(44,95,79,0.05) 0%, rgba(74,139,122,0.05) 100%);
-            border-radius: 10px;
-            border-left: 5px solid #2c5f4f;
-        }
-
-        .approach-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #2c5f4f;
-            margin-right: 25px;
-            min-width: 60px;
-        }
-
-        .approach-text h3 {
-            color: #2d3748;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-        }
-
-        .approach-text p {
-            color: #4a5568;
-            line-height: 1.7;
-            text-align: justify;
-        }
-
-        .process {
-            background: linear-gradient(135deg, rgba(247,250,252,0.95) 0%, rgba(237,242,247,0.95) 100%),
-                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80') center/cover;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        .process::before {
-            content: '◯';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 500px;
-            opacity: 0.04;
-            pointer-events: none;
-            color: #2c5f4f;
-        }
-
-        .process-list {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .process-item {
-            margin-bottom: 25px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .process-item:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #2c5f4f;
-            font-size: 2em;
-            line-height: 0.7;
-        }
-
-        .process-item strong {
-            color: #2c5f4f;
-        }
-
-        .process-item p {
-            margin-top: 5px;
-            color: #4a5568;
-            line-height: 1.7;
-            text-align: justify;
-        }
-
         .cta-section {
             background: linear-gradient(135deg, #2c5f4f 0%, #4a8b7a 100%);
             color: white;
@@ -820,7 +820,7 @@
         <h1>Despertar para o Ser Integral</h1>
         <p class="subtitle">Um processo terapêutico integrativo</p>
         <p>O Despertar para o Ser Integral é um processo terapêutico que integra diferentes abordagens de desenvolvimento pessoal e bem-estar, com o objetivo de promover a saúde integral, a consciência interior e a reconexão com a essência.</p>
-        <p>Através de práticas como meditação, hipnose, Medicina Tradicional Chinesa e Comunicação Não-Violenta, este caminho convida-a/o a explorar padrões, libertar bloqueios e desenvolver uma relação mais consciente consigo mesma/o.</p>
+        <p>Através de práticas como a Medicina Tradicional Chinesa, a Hipnoterapia, a Comunicação Não-Violenta e a Meditação, este caminho convida-a/o a explorar padrões, libertar bloqueios e desenvolver uma relação mais consciente consigo mesma/o.</p>
         <p style="font-size: 0.95em; font-style: italic; opacity: 0.9; margin-top: 20px;">Este processo tem um propósito de crescimento pessoal e bem-estar integral, não substituindo acompanhamento psicológico ou médico quando necessário.</p>
         <a href="#contacto" class="cta-button">Iniciar a Sua Jornada</a>
     </section>
