@@ -1174,12 +1174,19 @@
 
         function toggleMenu() {
             const menu = document.getElementById('navMenu');
-            menu.classList.toggle('active');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (menu) {
+                menu.classList.toggle('active');
+                console.log('Menu toggled:', menu.classList.contains('active'));
+            }
         }
 
         function closeMenu() {
             const menu = document.getElementById('navMenu');
-            menu.classList.remove('active');
+            if (menu) {
+                menu.classList.remove('active');
+            }
         }
 
         // Close menu when clicking outside
@@ -1187,8 +1194,22 @@
             const menu = document.getElementById('navMenu');
             const toggle = document.querySelector('.mobile-menu-toggle');
             
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('active');
+            if (menu && toggle) {
+                if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                    menu.classList.remove('active');
+                }
+            }
+        });
+
+        // Ensure menu works after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.getElementById('navMenu');
+            
+            if (toggle && menu) {
+                console.log('Menu elements found');
+            } else {
+                console.error('Menu elements not found');
             }
         });
     </script>
