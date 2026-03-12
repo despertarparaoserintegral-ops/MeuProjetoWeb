@@ -36,6 +36,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
+            position: relative;
         }
 
         .nav-logo {
@@ -43,6 +44,10 @@
             font-size: 1.3em;
             font-weight: 600;
             letter-spacing: 0.5px;
+            flex-shrink: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .nav-menu {
@@ -57,6 +62,7 @@
             font-weight: 500;
             transition: color 0.3s;
             padding: 5px 10px;
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
@@ -70,6 +76,9 @@
             color: white;
             font-size: 1.5em;
             cursor: pointer;
+            padding: 5px 10px;
+            margin-left: auto;
+            flex-shrink: 0;
         }
 
         /* Hero */
@@ -724,8 +733,17 @@
         }
 
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 15px 15px;
+            }
+
             .mobile-menu-toggle {
                 display: block;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1001;
             }
 
             .nav-menu {
@@ -734,7 +752,7 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(26, 58, 46, 0.98);
+                background: rgba(107, 70, 193, 0.98);
                 flex-direction: column;
                 gap: 0;
                 padding: 20px;
